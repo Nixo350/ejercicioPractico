@@ -10,7 +10,7 @@ var animals = {
     "frog": "croak",
     "lion": "roar",
     "bird": "tweet",
-    "lagart": "pssss"
+    "wolf": "howl"  
 }
 
 function getAnimal() {
@@ -30,7 +30,7 @@ With a ${ sound }-${ sound } here.<br />
 And a ${ sound }-${ sound } there.<br />
 Here a ${ sound }, there a ${ sound }.<br />
 Everywhere a ${ sound }-${ sound }.<br />`);
-      res.end();
+  res.end();
 });
 
 app.get('/api', function(req, res){
@@ -39,6 +39,6 @@ app.get('/api', function(req, res){
   res.end();
 })
 
-module.exports =  app.listen(port, () => {
+module.exports = app.listen(port, () => {
   console.log(`Launching server on http://localhost:${ port }`)
 });
